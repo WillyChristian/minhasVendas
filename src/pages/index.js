@@ -64,8 +64,7 @@ function Home() {
         </Container>        
         <Container maxWidth={'xl'} classes={{root: containerStyle.content}} >
           <Formulario />
-          <Tabela />            
-          {/* <Tabela data={data}/>             */}
+          <Tabela data={data}/>            
         </Container>   
       </ThemeProvider>     
     </>
