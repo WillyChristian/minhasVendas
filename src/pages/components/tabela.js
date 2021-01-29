@@ -28,18 +28,19 @@ export default function Tabela({data}) {
          </thead>
          <tbody>    
            <h1>Aqui vai a tabela</h1>       
-            {/* {
-              data.map( item => {
-                return( 
-                <tr>
-                  <td className={tableStyle.headAndBody} >{item[0]}</td>
-                  <td className={tableStyle.headAndBody} >{item[1]}</td>            
-                  <td className={tableStyle.headAndBody} >{item[2]}</td>            
-                  <td className={tableStyle.headAndBody} >{item[3]}</td>            
-                </tr>
-                )  
-              })
-            }           */}
+            {
+              data[0][0]
+              // data.map( item => {
+              //   return( 
+              //   <tr>
+              //     <td className={tableStyle.headAndBody} >{item[0]}</td>
+              //     <td className={tableStyle.headAndBody} >{item[1]}</td>            
+              //     <td className={tableStyle.headAndBody} >{item[2]}</td>            
+              //     <td className={tableStyle.headAndBody} >{item[3]}</td>            
+              //   </tr>
+              //   )  
+              // })
+            }          
          </tbody>
        </table>
      </Container>
