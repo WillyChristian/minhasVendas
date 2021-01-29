@@ -15,10 +15,18 @@ const styles = makeStyles({
 
 })
 
-// const genTable = data =>{  
+// const gentable = data =>{
+//   data.map( element => {
 //     return (
-
+//       <tr>
+//         <td className={tableStyle.headAndBody} >{item[0]}</td>
+//         <td className={tableStyle.headAndBody} >{item[1]}</td>            
+//         <td className={tableStyle.headAndBody} >{item[2]}</td>            
+//         <td className={tableStyle.headAndBody} >{item[3]}</td>            
+//       </tr>
 //     )
+//   })
+
 // }
 
 export default function Tabela({data}) {
@@ -33,23 +41,9 @@ export default function Tabela({data}) {
             <th className={tableStyle.headAndBody}>Peça / Serviço executado</th>
             <th className={tableStyle.headAndBody}>Valor final (R$)</th>
          </thead>
-         <tbody>
-           {
-
-           }  
-            <tr>
-              <td className={tableStyle.headAndBody} >{data[0]}</td>
-            </tr>                
-            <tr>
-              <td className={tableStyle.headAndBody} >{data[1]}</td>            
-            </tr>                
-            <tr>
-              <td className={tableStyle.headAndBody} >{data[2]}</td>            
-            </tr>                
-              <td className={tableStyle.headAndBody} >{data[3]}</td>            
-            <tr>
-              <td className={tableStyle.headAndBody} >{data[4]}</td>            
-            </tr>                
+         <tbody>    
+           <h1>Aqui vai a tabela</h1>       
+            { JSON.stringify(data) }          
          </tbody>
        </table>
      </Container>
