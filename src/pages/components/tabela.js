@@ -19,10 +19,10 @@ const genTable = data =>{
   data.map( element => {
     return (
       <tr>
-        <td className={tableStyle.headAndBody} >{item[0]}</td>
-        <td className={tableStyle.headAndBody} >{item[1]}</td>            
-        <td className={tableStyle.headAndBody} >{item[2]}</td>            
-        <td className={tableStyle.headAndBody} >{item[3]}</td>            
+        <td className={tableStyle.headAndBody} >{element[0]}</td>
+        <td className={tableStyle.headAndBody} >{element[1]}</td>            
+        <td className={tableStyle.headAndBody} >{element[2]}</td>            
+        <td className={tableStyle.headAndBody} >{element[3]}</td>            
       </tr>
     )
   })
