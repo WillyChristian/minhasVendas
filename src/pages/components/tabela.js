@@ -29,7 +29,7 @@ export default function Tabela({data}) {
          <tbody>    
            <h1>Aqui vai a tabela</h1>       
             {
-              data[0][0]
+              
               // data.map( item => {
               //   return( 
               //   <tr>
