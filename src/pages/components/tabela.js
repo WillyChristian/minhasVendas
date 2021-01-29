@@ -35,18 +35,18 @@ export default function Tabela({data}) {
          </thead>
          <tbody>    
             <tr>
-              <td className={tableStyle.headAndBody} >{data[0][0]}</td>
-              <td className={tableStyle.headAndBody} >{data[0][1]}</td>            
-              <td className={tableStyle.headAndBody} >{data[0][2]}</td>            
-              <td className={tableStyle.headAndBody} >{data[0][3]}</td>            
-              <td className={tableStyle.headAndBody} >{data[0][4]}</td>            
+              <td className={tableStyle.headAndBody} >{data[0]}</td>
+              <td className={tableStyle.headAndBody} >{data[1]}</td>            
+              <td className={tableStyle.headAndBody} >{data[2]}</td>            
+              <td className={tableStyle.headAndBody} >{data[3]}</td>            
+              <td className={tableStyle.headAndBody} >{data[4]}</td>            
             </tr>         
             <tr>
-              <td className={tableStyle.headAndBody} >{data[1][0]}</td>
-              <td className={tableStyle.headAndBody} >{data[1][1]}</td>            
-              <td className={tableStyle.headAndBody} >{data[1][2]}</td>            
-              <td className={tableStyle.headAndBody} >{data[1][3]}</td>            
-              <td className={tableStyle.headAndBody} >{data[1][4]}</td>            
+              <td className={tableStyle.headAndBody} >{data[1]}</td>
+              <td className={tableStyle.headAndBody} >{data[1]}</td>            
+              <td className={tableStyle.headAndBody} >{data[1]}</td>            
+              <td className={tableStyle.headAndBody} >{data[1]}</td>            
+              <td className={tableStyle.headAndBody} >{data[1]}</td>            
             </tr>         
          </tbody>
        </table>
