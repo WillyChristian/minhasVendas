@@ -33,21 +33,23 @@ export default function Tabela({data}) {
             <th className={tableStyle.headAndBody}>Peça / Serviço executado</th>
             <th className={tableStyle.headAndBody}>Valor final (R$)</th>
          </thead>
-         <tbody>    
+         <tbody>
+           {
+
+           }  
             <tr>
               <td className={tableStyle.headAndBody} >{data[0]}</td>
-              <td className={tableStyle.headAndBody} >{data[1]}</td>            
-              <td className={tableStyle.headAndBody} >{data[2]}</td>            
-              <td className={tableStyle.headAndBody} >{data[3]}</td>            
-              <td className={tableStyle.headAndBody} >{data[4]}</td>            
-            </tr>         
+            </tr>                
             <tr>
-              <td className={tableStyle.headAndBody} >{data[1]}</td>
               <td className={tableStyle.headAndBody} >{data[1]}</td>            
-              <td className={tableStyle.headAndBody} >{data[1]}</td>            
-              <td className={tableStyle.headAndBody} >{data[1]}</td>            
-              <td className={tableStyle.headAndBody} >{data[1]}</td>            
-            </tr>         
+            </tr>                
+            <tr>
+              <td className={tableStyle.headAndBody} >{data[2]}</td>            
+            </tr>                
+              <td className={tableStyle.headAndBody} >{data[3]}</td>            
+            <tr>
+              <td className={tableStyle.headAndBody} >{data[4]}</td>            
+            </tr>                
          </tbody>
        </table>
      </Container>
