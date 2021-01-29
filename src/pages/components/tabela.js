@@ -32,12 +32,12 @@ export default function Tabela({data}) {
               
               // data.map( item => {
               //   return( 
-              //   <tr>
-              //     <td className={tableStyle.headAndBody} >{item[0]}</td>
-              //     <td className={tableStyle.headAndBody} >{item[1]}</td>            
-              //     <td className={tableStyle.headAndBody} >{item[2]}</td>            
-              //     <td className={tableStyle.headAndBody} >{item[3]}</td>            
-              //   </tr>
+                <tr>
+                  <td className={tableStyle.headAndBody} >{data}</td>
+                  {/* <td className={tableStyle.headAndBody} >{item[1]}</td>            
+                  <td className={tableStyle.headAndBody} >{item[2]}</td>            
+                  <td className={tableStyle.headAndBody} >{item[3]}</td>             */}
+                </tr>
               //   )  
               // })
             }          

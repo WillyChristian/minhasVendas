@@ -63,8 +63,7 @@ function Home() {
           <img className='logo' src='/Logo_ifixdigital.png' alt="logo_ifix"/>
         </Container>        
         <Container maxWidth={'xl'} classes={{root: containerStyle.content}} >
-          <Formulario />
-          {console.log(data)}
+          <Formulario />          
           <Tabela data={data}/>            
         </Container>   
       </ThemeProvider>     
