@@ -14,6 +14,21 @@ const styles = makeStyles({
   },
 
 })
+
+const gentable = data =>{
+  data.map( element => {
+    return (
+      <tr>
+        <td className={tableStyle.headAndBody} >{item[0]}</td>
+        <td className={tableStyle.headAndBody} >{item[1]}</td>            
+        <td className={tableStyle.headAndBody} >{item[2]}</td>            
+        <td className={tableStyle.headAndBody} >{item[3]}</td>            
+      </tr>
+    )
+  })
+
+}
+
 export default function Tabela({data}) {
   const tableStyle = styles()
   return (
@@ -28,18 +43,7 @@ export default function Tabela({data}) {
          </thead>
          <tbody>    
            <h1>Aqui vai a tabela</h1>       
-            {              
-              data.forEach(item => {
-                return( 
-                <tr>
-                  <td className={tableStyle.headAndBody} >{item[0]}</td>
-                  <td className={tableStyle.headAndBody} >{item[1]}</td>            
-                  <td className={tableStyle.headAndBody} >{item[2]}</td>            
-                  <td className={tableStyle.headAndBody} >{item[3]}</td>            
-                </tr>
-                )  
-              })
-            }          
+            { genTable(data) }          
          </tbody>
        </table>
      </Container>
