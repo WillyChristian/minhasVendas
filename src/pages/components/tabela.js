@@ -29,7 +29,7 @@ const styles = makeStyles({
 
 // }
 
-export default async function Tabela({data}) {
+export default function Tabela({data}) {
   const tableStyle = styles()
   return (
     <>
@@ -45,7 +45,7 @@ export default async function Tabela({data}) {
            <h1>Aqui vai a tabela</h1>       
             { 
               
-              await data.map( item => {
+              data.map( item => {
                 return (
                   <tr>
                     <td className={tableStyle.headAndBody} >{item[0]}</td>
