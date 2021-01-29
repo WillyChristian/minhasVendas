@@ -6,7 +6,7 @@ const doc = new GoogleSpreadsheet(process.env.SHEET_ID)
 
 const toOriginal = value =>{
     const buff = Buffer.from(value, 'base64')
-    return buff.toString()
+    return buff.toString('ascii')
 }
 
 export default async (req, res) =>{

@@ -26,8 +26,9 @@ export default function Tabela({data}) {
             <th className={tableStyle.headAndBody}>Peça / Serviço executado</th>
             <th className={tableStyle.headAndBody}>Valor final (R$)</th>
          </thead>
-         <tbody>           
-            {
+         <tbody>    
+           <h1>Aqui vai a tabela</h1>       
+            {/* {
               data.map( item => {
                 return( 
                 <tr>
@@ -38,7 +39,7 @@ export default function Tabela({data}) {
                 </tr>
                 )  
               })
-            }          
+            }           */}
          </tbody>
        </table>
      </Container>

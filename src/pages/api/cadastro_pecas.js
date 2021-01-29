@@ -5,13 +5,12 @@ const doc = new GoogleSpreadsheet(process.env.SHEET_ID)
 
 const toOriginal = value =>{
     const buff = Buffer.from(value, 'base64')
-    return buff.toString()
+    return buff.toString('ascii')
 }
 
 export default async (req,res) =>{
     
     try {
-        console.log(toOriginal(process.env.SECRET_KEY))
         await doc.useServiceAccountAuth({
             client_email: process.env.EMAIL,
             private_key: toOriginal(process.env.SECRET_KEY)
@@ -26,7 +25,7 @@ export default async (req,res) =>{
         });
         res.status(200).send('Cadastrado com Sucesso')
     } catch (error) {
-        res.status(500).send(error.message)
+        res.status(500).send(console.log(error))
     }
 }
 
