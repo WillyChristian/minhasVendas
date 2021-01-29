@@ -15,7 +15,7 @@ const styles = makeStyles({
 
 })
 
-const gentable = data =>{
+const genTable = data =>{
   data.map( element => {
     return (
       <tr>
