@@ -15,19 +15,11 @@ const styles = makeStyles({
 
 })
 
-const genTable = data =>{
-  data.map( element => {
-    return (
-      <tr>
-        <td className={tableStyle.headAndBody} >{element[0]}</td>
-        <td className={tableStyle.headAndBody} >{element[1]}</td>            
-        <td className={tableStyle.headAndBody} >{element[2]}</td>            
-        <td className={tableStyle.headAndBody} >{element[3]}</td>            
-      </tr>
-    )
-  })
+// const genTable = data =>{  
+//     return (
 
-}
+//     )
+// }
 
 export default function Tabela({data}) {
   const tableStyle = styles()
@@ -42,8 +34,20 @@ export default function Tabela({data}) {
             <th className={tableStyle.headAndBody}>Valor final (R$)</th>
          </thead>
          <tbody>    
-           <h1>Aqui vai a tabela</h1>       
-            { genTable(data) }          
+            <tr>
+              <td className={tableStyle.headAndBody} >{element[0][0]}</td>
+              <td className={tableStyle.headAndBody} >{element[0][1]}</td>            
+              <td className={tableStyle.headAndBody} >{element[0][2]}</td>            
+              <td className={tableStyle.headAndBody} >{element[0][3]}</td>            
+              <td className={tableStyle.headAndBody} >{element[0][4]}</td>            
+            </tr>         
+            <tr>
+              <td className={tableStyle.headAndBody} >{element[1][0]}</td>
+              <td className={tableStyle.headAndBody} >{element[1][1]}</td>            
+              <td className={tableStyle.headAndBody} >{element[1][2]}</td>            
+              <td className={tableStyle.headAndBody} >{element[1][3]}</td>            
+              <td className={tableStyle.headAndBody} >{element[1][4]}</td>            
+            </tr>         
          </tbody>
        </table>
      </Container>
