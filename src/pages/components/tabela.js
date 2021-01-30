@@ -15,10 +15,8 @@ const styles = makeStyles({
 
 })
 
-const genTable = data =>{
-  const newData = [...data]
-
-  data.map( item => {
+const GenTable= ({item}) =>{
+  const tableStyle = styles()
     return (
       <tr>
         <td className={tableStyle.headAndBody} >{item[0]}</td>
@@ -27,8 +25,6 @@ const genTable = data =>{
         <td className={tableStyle.headAndBody} >{item[3]}</td>            
       </tr>
     )
-  })
-
 }
 
 export default function Tabela({data}) {
@@ -46,7 +42,9 @@ export default function Tabela({data}) {
          <tbody>    
            <h1>Aqui vai a tabela</h1>       
             { 
-              genTable(data)
+              data?.map( (item, index) =>{ //data? filtra o conteúdo para que ele não execute caso haja undefined ou null
+                <GenTable key={index} item={item} />
+              })
             }          
          </tbody>
        </table>
