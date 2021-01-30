@@ -70,7 +70,4 @@ function Home() {
     </>
   )}
 }
-
 export default Home
-/* <Table data = {data}/> 
- <Button variant='outlined' onClick={()=> mutate}>Atualizar</Button> */

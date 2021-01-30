@@ -39,8 +39,7 @@ export default function Tabela({data}) {
             <th className={tableStyle.headAndBody}>Peça / Serviço executado</th>
             <th className={tableStyle.headAndBody}>Valor final (R$)</th>
          </thead>
-         <tbody>    
-           <h1>Aqui vai a tabela</h1>       
+         <tbody>      
             { 
               data?.map( (item, index) =>{ //data? filtra o conteúdo para que ele não execute caso haja undefined ou null
                 <GenTable key={index} item={item} />
