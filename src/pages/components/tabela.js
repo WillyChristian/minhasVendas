@@ -44,7 +44,7 @@ export default function Tabela({data}) {
               // data.map( (item, index) =>{ //data? filtra o conteúdo para que ele não execute caso haja undefined ou null
               //   <GenTable key={index} item={item} />
               // })
-              data.map(element => {
+              data?.map(element => {
                 return(
                   <tbody>      
                       <td className={tableStyle.headAndBody} >{element.marca}</td>
