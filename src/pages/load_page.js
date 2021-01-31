@@ -23,7 +23,7 @@ const style = makeStyles({
             left: '10px',
             right: '10px',
             bottom: '10px',
-            background: "url('/apple-logo.png')",
+            backgroundImage: "url('/apple-logo.png')",
             borderRadius: '50%'
         }   
     },
