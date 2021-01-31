@@ -23,26 +23,26 @@ const styles = makeStyles((theme) =>({
         [theme.breakpoints.between('xs', 'sm')]:{
           width: '90%',          
         }
-      }    
+      }
     },
     content:{
-      height: '85vh',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      alignItems: 'center',
       background: 'linear-gradient(180deg, rgba(66,66,66,1) 0%, rgba(94,94,94,1) 35%, rgba(229,229,229,1) 100%)',
-      [theme.breakpoints.up('xs')]:{
+      [theme.breakpoints.between('xs','sm')]:{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
         flexDirection: 'column',
-        padding:'1.3em 0.5em',
-        overflow: 'hidden',
-        height: '100vh',
-        justifyContent: 'space-around'
+        alignItems:'center',
+        padding: "1rem 0.5rem",
+      },
+      [theme.breakpoints.between('sm', 'md')]:{
+        display: 'flex',
+        flexDirection: 'column',
+        width: "100%",
       },
       [theme.breakpoints.between('md', 'xl')]:{
+        display: 'flex',
         flexDirection: 'row',
-        padding: '2em'
       },
     }
 }))

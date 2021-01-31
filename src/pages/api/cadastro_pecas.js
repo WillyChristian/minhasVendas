@@ -21,7 +21,8 @@ export default async (req,res) =>{
         await folha.addRow({
             Marca: row.marca,
             Modelo: row.modelo,
-            Peça: row.peca
+            Peça: row.peca,
+            Preço: row.preço
         });
         res.status(200).send('Cadastrado com Sucesso')
     } catch (error) {
