@@ -11,19 +11,13 @@ import {
 const style = makeStyles(theme =>({
     form: {
         color: "#fff",
-        padding: '1.5em',
-        [theme.breakpoints.up('md')]:{
-            margin: '1em'
-        }
+        padding: '1.5em'
     },
     btn:{
-        margin: '15px 0px',
+        margin: '25px 10px',
         color: gray[50]
     },
-    grid:{
-       display: 'flex',
-       alignItems: 'center' 
-    }
+
 }))
 
 

@@ -40,14 +40,13 @@ const styles = makeStyles((theme) =>({
         flexDirection: 'column',
         width: "100%",
         height: '100vh',
-        padding: "2.5em"
       },
-      [theme.breakpoints.up('md')]:{
+      [theme.breakpoints.between('md','xl')]:{
         display: 'flex',
         flexDirection: 'row',
+        justifyContent: 'space-between',
         width: '100%',
         height: '100vh',
-        padding: "2.5em",
       },
     }
 }))
