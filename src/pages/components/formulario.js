@@ -8,9 +8,13 @@ import {
 } from '@material-ui/core'
 
 
-const style = makeStyles({
+const style = makeStyles(theme =>({
     form: {
         color: "#fff",
+        padding: '1.5em',
+        [theme.breakpoints.up('md')]:{
+            margin: '1em'
+        }
     },
     btn:{
         margin: '15px 0px',
@@ -20,7 +24,7 @@ const style = makeStyles({
        display: 'flex',
        alignItems: 'center' 
     }
-})
+}))
 
 
 export default function Formulario(){

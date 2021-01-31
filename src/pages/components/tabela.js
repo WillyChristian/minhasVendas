@@ -7,11 +7,10 @@ const styles = makeStyles((theme)=>({
     borderCollapse: 'collapse',
     width: '85%',
     margin: '1.5rem 0rem',
-    [theme.breakpoints.between('xs',"sm")]:{
 
-    },
-    [theme.breakpoints.between('sm',"md")]:{
- 
+    [theme.breakpoints.up("md")]:{
+      margin: "1em",
+      padding: "1em"
     }
   },
   headAndBody:{
