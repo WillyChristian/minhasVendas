@@ -6,6 +6,7 @@ import {Container, makeStyles, createMuiTheme, ThemeProvider} from '@material-ui
 import Tabela from './components/tabela'
 import Formulario from '../pages/components/formulario'
 import Erro from './components/erro'
+import LoadPage from './components/load_page'
 
 const theme = createMuiTheme({
   palette: {
@@ -54,7 +55,7 @@ function Home() {
   const {data, error} = useSWR('/api/tabela_pecas')
   const containerStyle = styles()
   if(error) return <Container><Erro/></Container>
-  if(!data) return <Container><h1>Carregando...</h1></Container>
+  if(!data) return <LoadPage/>
   if (data){ 
   return (
     <>
@@ -70,4 +71,7 @@ function Home() {
     </>
   )}
 }
+
 export default Home
+/* <Table data = {data}/> 
+ <Button variant='outlined' onClick={()=> mutate}>Atualizar</Button> */
