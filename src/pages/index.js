@@ -1,19 +1,14 @@
 import React from 'react'
 import useSWR from 'swr' 
-import {Container, makeStyles, createMuiTheme, ThemeProvider} from '@material-ui/core'
+import {Container, makeStyles} from '@material-ui/core'
 
-// content
+// components
 import Tabela from './components/tabela'
 import Formulario from '../pages/components/formulario'
 import Erro from './components/erro'
-// import LoadPage from './components/load_page'
-import LoadPage from './load_page'
+import LoadPage from './components/load_page'
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {main:'#fafafa'}
-  }
-})
+
 
 const styles = makeStyles((theme) =>({
     header:{
@@ -59,16 +54,14 @@ function Home() {
   if(!data) return <LoadPage/>
   if (data){ 
   return (
-    <>
-      <ThemeProvider theme={theme} >
+    <>      
         <Container maxWidth={'xl'} classes={{root: containerStyle.header}}>
           <img className='logo' src='/Logo_ifixdigital.png' alt="logo_ifix"/>
         </Container>        
         <Container maxWidth={'xl'} classes={{root: containerStyle.content}} >
           <Formulario />          
           <Tabela data={data}/>            
-        </Container>   
-      </ThemeProvider>     
+        </Container>            
     </>
   )}
 }

@@ -23,6 +23,7 @@ const GenTable= ({item}) =>{
         <td className={tableStyle.headAndBody} >{item[1]}</td>            
         <td className={tableStyle.headAndBody} >{item[2]}</td>            
         <td className={tableStyle.headAndBody} >{item[3]}</td>            
+        <td className={tableStyle.headAndBody} >{item[4]}</td>            
       </tr>
     )
 }
@@ -41,7 +42,7 @@ export default function Tabela({data}) {
          </thead>
          <tbody>      
             { 
-              data?.map( (item, index) =>{ //data? filtra o conteúdo para que ele não execute caso haja undefined ou null
+              data.map( (item, index) =>{ //data? filtra o conteúdo para que ele não execute caso haja undefined ou null
                 <GenTable key={index} item={item} />
               })
             }          
