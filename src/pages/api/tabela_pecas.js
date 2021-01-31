@@ -20,22 +20,29 @@ export default async (req, res) =>{
       const folha = doc.sheetsByIndex[0]      
       const linha = await folha.getRows();
 
-      const items = []
+      // const items = []
 
-      let contador = 0
-      while (linha[contador] !== undefined ){
-        contador++
-      }
+      // let contador = 0
+      // while (linha[contador] !== undefined ){
+      //   contador++
+      // }
 
-      for(let i = 0; i < contador; i++){
-          let mrk = linha[i].Marca
-          let mdlo = linha[i].Modelo
-          let pca = linha[i].Peça
-          let pco = linha[i].Preço
-          items.push([mrk,mdlo,pca,pco])
-      }
+      // for(let i = 0; i < contador; i++){
+      //     let mrk = linha[i].Marca
+      //     let mdlo = linha[i].Modelo
+      //     let pca = linha[i].Peça
+      //     let pco = linha[i].Preço
+      //     items.push([mrk,mdlo,pca,pco])
+      // }
+      const services = linha.map(colun =>({
+        marca: colun.Marca,
+        modelo: colun.Modelo,
+        peça: colun.Peça,
+        preço: colun.Preço
+      }))
 
-    res.status(200).send(items)
+
+    res.status(200).send(JSON.stringify(services))
   }catch (error) {
       res.status(500).send(`${error.message}`)
   }

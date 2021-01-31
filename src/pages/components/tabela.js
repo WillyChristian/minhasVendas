@@ -15,18 +15,18 @@ const styles = makeStyles({
 
 })
 
-const GenTable= ({item}) =>{
-  const tableStyle = styles()
-    return (
-      <tr>
-        <td className={tableStyle.headAndBody} >{item[0]}</td>
-        <td className={tableStyle.headAndBody} >{item[1]}</td>            
-        <td className={tableStyle.headAndBody} >{item[2]}</td>            
-        <td className={tableStyle.headAndBody} >{item[3]}</td>            
-        <td className={tableStyle.headAndBody} >{item[4]}</td>            
-      </tr>
-    )
-}
+// const GenTable= ({item}) =>{
+//   const tableStyle = styles()
+//     return (
+//       <tr>
+//         <td className={tableStyle.headAndBody} >{item[0]}</td>
+//         <td className={tableStyle.headAndBody} >{item[1]}</td>            
+//         <td className={tableStyle.headAndBody} >{item[2]}</td>            
+//         <td className={tableStyle.headAndBody} >{item[3]}</td>            
+//         <td className={tableStyle.headAndBody} >{item[4]}</td>            
+//       </tr>
+//     )
+// }
 
 export default function Tabela({data}) {
   const tableStyle = styles()
@@ -35,18 +35,27 @@ export default function Tabela({data}) {
      <Container>
        <table className={tableStyle.table}>
          <thead>
-            <th className={tableStyle.headAndBody}>Marca do Aparelho</th>
-            <th className={tableStyle.headAndBody}>Modelo do Aparelho</th>
-            <th className={tableStyle.headAndBody}>Peça / Serviço executado</th>
-            <th className={tableStyle.headAndBody}>Valor final (R$)</th>
+            <td className={tableStyle.headAndBody}>Marca do Aparelho</td>
+            <td className={tableStyle.headAndBody}>Modelo do Aparelho</td>
+            <td className={tableStyle.headAndBody}>Peça / Serviço executado</td>
+            <td className={tableStyle.headAndBody}>Valor final (R$)</td>
          </thead>
-         <tbody>      
             { 
-              data.map( (item, index) =>{ //data? filtra o conteúdo para que ele não execute caso haja undefined ou null
-                <GenTable key={index} item={item} />
+              // data.map( (item, index) =>{ //data? filtra o conteúdo para que ele não execute caso haja undefined ou null
+              //   <GenTable key={index} item={item} />
+              // })
+              data.map(element => {
+                return(
+                  <tbody>      
+                      <td className={tableStyle.headAndBody} >{element.marca}</td>
+                      <td className={tableStyle.headAndBody} >{element.modelo}</td>            
+                      <td className={tableStyle.headAndBody} >{element.peça}</td>            
+                      <td className={tableStyle.headAndBody} >{element.preço}</td>            
+         
+                  </tbody>
+                )
               })
             }          
-         </tbody>
        </table>
      </Container>
     </>
