@@ -23,7 +23,7 @@ const style = makeStyles({
             left: '10px',
             right: '10px',
             bottom: '10px',
-            background: 'linear-gradient(180deg, rgba(66,66,66,1) 0%, rgba(94,94,94,1) 35%, rgba(229,229,229,1) 100%)',
+            background: "url('/apple-logo.png')",
             borderRadius: '50%'
         }   
     },

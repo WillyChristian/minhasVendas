@@ -6,7 +6,8 @@ import {Container, makeStyles, createMuiTheme, ThemeProvider} from '@material-ui
 import Tabela from './components/tabela'
 import Formulario from '../pages/components/formulario'
 import Erro from './components/erro'
-import LoadPage from './components/load_page'
+// import LoadPage from './components/load_page'
+import LoadPage from './load_page'
 
 const theme = createMuiTheme({
   palette: {
@@ -41,7 +42,7 @@ const styles = makeStyles((theme) =>({
         flexDirection: 'column',
         padding:'1.3em 0.5em',
         overflow: 'hidden',
-        height: '95vh',
+        height: '100vh',
         justifyContent: 'space-around'
       },
       [theme.breakpoints.between('md', 'xl')]:{
