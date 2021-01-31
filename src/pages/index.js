@@ -39,10 +39,15 @@ const styles = makeStyles((theme) =>({
         display: 'flex',
         flexDirection: 'column',
         width: "100%",
+        height: '100vh',
+        paddin: "2.5em"
       },
       [theme.breakpoints.between('md', 'xl')]:{
         display: 'flex',
         flexDirection: 'row',
+        width: '100%',
+        height: '100vh',
+        paddin: "2.5em",
       },
     }
 }))
